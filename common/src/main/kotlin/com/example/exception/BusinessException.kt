@@ -2,7 +2,7 @@ package com.example.exception
 
 open class BusinessException : RuntimeException {
 
-    private var errorCode: Int = -99999
+    var errorCode: Int = -99999
 
     override val message: String
         get() = super.message ?: ""

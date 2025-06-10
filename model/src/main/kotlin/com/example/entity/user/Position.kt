@@ -3,24 +3,19 @@ package com.example.entity.user
 import com.example.entity.common.BaseCreateBy
 import com.example.entity.common.BaseModifiedBy
 import com.example.entity.common.BaseTime
-import com.example.enums.EPermission
 import org.babyfish.jimmer.sql.*
 
 @Entity
 @Table(
-    name = "permission"
+    name = "position"
 )
-interface Permission : BaseCreateBy, BaseModifiedBy, BaseTime {
+interface Position : BaseCreateBy, BaseModifiedBy, BaseTime {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long
 
-    @Key
-    val name: EPermission
+    val name: String
 
-    @Key
-    val code: EPermission
-
-    @ManyToMany(mappedBy = "permissions")
-    val roles: List<Role>
+    @ManyToMany(mappedBy = "positions")
+    val users: List<User>
 }
