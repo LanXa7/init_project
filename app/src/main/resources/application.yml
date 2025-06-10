@@ -10,6 +10,7 @@ spring:
     default-schema: ${DATABASE_DEFAULT_SCHEMA}
   config:
     import:
+      - "optional:file:.env[.properties]"
       - classpath:config/security.yml
       - classpath:config/mail.yml
 
