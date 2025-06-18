@@ -118,7 +118,7 @@ class GlobalExceptionHandler : ResponseEntityExceptionHandler() {
         private val format =
             DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS")
 
-        
+
         private val log = KotlinLogging.logger {}
 
     }
