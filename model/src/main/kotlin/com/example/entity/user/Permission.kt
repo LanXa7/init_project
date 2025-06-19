@@ -8,7 +8,7 @@ import org.babyfish.jimmer.sql.*
 
 @Entity
 @Table(
-    name = "permission"
+    name = "mkga.permission"
 )
 interface Permission : BaseCreateBy, BaseModifiedBy, BaseTime {
     @Id

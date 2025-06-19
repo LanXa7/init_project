@@ -37,7 +37,7 @@ class WebSecurityConfig(
             .csrf { it.disable() }
             .authorizeHttpRequests {
                 exposedEndpoints.forEach { endpoint ->
-                    if (endpoint.method == null) {
+                    if (endpoint.method?.name().equals("ANY")) {
                         it
                             .requestMatchers(endpoint.path)
                             .permitAll()

@@ -7,7 +7,7 @@ import org.babyfish.jimmer.sql.*
 
 @Entity
 @Table(
-    name = "position"
+    name = "mkga.position"
 )
 interface Position : BaseCreateBy, BaseModifiedBy, BaseTime {
     @Id

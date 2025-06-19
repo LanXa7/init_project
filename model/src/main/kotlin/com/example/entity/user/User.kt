@@ -5,7 +5,7 @@ import com.example.entity.common.BaseTime
 import org.babyfish.jimmer.sql.*
 
 @Entity
-@Table(name = "\"user\"")
+@Table(name = "mkga.user")
 interface User : BaseModifiedBy, BaseTime {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -11,4 +11,10 @@ security:
       path: /auth/**
     - method: ANY  # 表示允许所有方法（GET、POST、PUT 等）
       path: /test/**
+    - method: GET
+      path: /openapi.html
+    - method: GET
+      path: /openapi.yaml
+    - method: GET
+      path: /openapi.json
 

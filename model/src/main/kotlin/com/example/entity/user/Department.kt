@@ -7,7 +7,7 @@ import org.babyfish.jimmer.sql.*
 
 @Entity
 @Table(
-    name = "department",
+    name = "mkga.department",
 )
 interface Department: BaseCreateBy, BaseModifiedBy, BaseTime{
     @Id
@@ -18,7 +18,7 @@ interface Department: BaseCreateBy, BaseModifiedBy, BaseTime{
 
     @ManyToOne
     @JoinColumn(name = "parent_id")
-    val parent: Department
+    val parent: Department?
 
     @OneToMany(mappedBy = "parent")
     val children: List<Department>
